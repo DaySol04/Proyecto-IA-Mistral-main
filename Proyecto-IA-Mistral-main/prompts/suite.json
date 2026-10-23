@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "categoria": "Generación de texto",
+    "prompt": "Actúa como un estudiante universitario. Redacta un correo electrónico dirigido a la coordinación académica para justificar una ausencia por motivos de salud, solicitando además el material de la clase."
+  },
+  {
+    "id": 2,
+    "categoria": "Generación de texto",
+    "prompt": "Escribe un texto persuasivo de un párrafo (máximo 120 palabras) convenciendo a los jóvenes de usar menos el celular antes de dormir."
+  },
+  {
+    "id": 3,
+    "categoria": "Resumen",
+    "prompt": "Resume el siguiente texto en exactamente 3 viñetas con un máximo de 20 palabras por viñeta: 'Lo esencial es invisible a los ojos. Fue el zorro quien le enseñó al principito esta gran lección. El zorro le explicó que los hombres han olvidado esta verdad, pero que él no debía olvidarla. Le dijo que uno solo ve bien con el corazón, porque lo verdaderamente importante no se puede ver con los ojos. Al principio, el principito no comprendía del todo, pero al pensar en su rosa, entendió que el tiempo que había perdido con ella era lo que la hacía tan importante.'"
+  },
+  {
+    "id": 4,
+    "categoria": "Resumen",
+    "prompt": "Lee el siguiente fragmento y resúmelo en 2 oraciones claras: 'La tecnología ha revolucionado la educación en la última década. El acceso a internet y dispositivos móviles ha permitido que los estudiantes aprendan a su propio ritmo y desde cualquier lugar. Sin embargo, la brecha digital sigue siendo un desafío, ya que no todos los estudiantes cuentan con los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades existentes en el sistema educativo.'"
+  },
+  {
+    "id": 5,
+    "categoria": "Corrección y traducción",
+    "prompt": "Corrige los errores de ortografía y gramática en el siguiente texto: 'El dia de ayer los chicos fueron a caminar por el parque pero se encontraron con que abian muchas personas y no pudieron encontrar un lugar donde sentarse.'"
+  },
+  {
+    "id": 6,
+    "categoria": "Corrección y traducción",
+    "prompt": "Traduce el siguiente refrán al inglés de la manera más natural posible: 'No hay mal que por bien no venga'."
+  },
+  {
+    "id": 7,
+    "categoria": "Código",
+    "prompt": "Escribe una función en Python llamada 'factorial' que reciba un número entero y calcule su factorial de forma iterativa. Incluye comentarios en el código."
+  },
+  {
+    "id": 8,
+    "categoria": "Código",
+    "prompt": "Genera una consulta SQL que seleccione el nombre y el correo electrónico de todos los clientes que hayan realizado compras por más de $500 en el último mes, ordenados alfabéticamente."
+  },
+  {
+    "id": 9,
+    "categoria": "Razonamiento y veracidad",
+    "prompt": "Tengo 5 manzanas. Si me como 2 y luego un amigo me regala 4, ¿cuántas manzanas tengo ahora? Explica el razonamiento matemático paso a paso."
+  },
+  {
+    "id": 10,
+    "categoria": "Razonamiento y veracidad",
+    "prompt": "¿Cuál es el río más largo del mundo? Responde con el nombre del río y el continente donde se encuentra."
+  }
+]
