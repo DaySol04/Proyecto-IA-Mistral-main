@@ -9,6 +9,7 @@ import pandas as pd
 #OLLAMA_API = "http://127.0.0.1:11434/api/generate" 
 OLLAMA_API = "http://host.docker.internal:11434/api/generate" #Para que ollama se comunique con docker
 
+#Mide los tiempos
 def medir_inferencia(modelo, prompt, temperatura, max_tokens):
     payload = {
         "model": modelo,
@@ -18,7 +19,7 @@ def medir_inferencia(modelo, prompt, temperatura, max_tokens):
         "options": {"num_predict": max_tokens}
     }
     
-    start_time = time.time()
+    start_time = time.time() #cronometro
     ttft = None
     tokens_generados = 0
     respuesta_completa = ""
@@ -28,9 +29,9 @@ def medir_inferencia(modelo, prompt, temperatura, max_tokens):
             response.raise_for_status()
             for line in response.iter_lines():
                 if line:
-                    chunk = json.loads(line)
+                    chunk = json.loads(line) #
                     if 'response' in chunk:
-                        if ttft is None:
+                        if ttft is None: #Si es el primer token recibido, se calcula el TTFT
                             ttft = time.time() - start_time
                         respuesta_completa += chunk['response']
                         tokens_generados += 1
@@ -45,6 +46,7 @@ def medir_inferencia(modelo, prompt, temperatura, max_tokens):
     tiempo_generacion = tiempo_total - ttft if ttft else tiempo_total
     tokens_por_segundo = tokens_generados / tiempo_generacion if tiempo_generacion > 0 else 0
     
+    #Se devuelve un diccionario con todos los datos 
     return {
         "modelo": modelo,                
         "temperatura": temperatura,
@@ -64,10 +66,10 @@ if __name__ == "__main__":
     parser.add_argument("--output", default="results/resultados.csv", help="Archivo CSV de salida")
     args = parser.parse_args()
     
-    # Crear la carpeta results si no existe
+    # Crea la carpeta results si no existe
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     
-    # Leer el archivo suite.json
+    # Lee el archivo suite.json
     with open(args.prompts, 'r', encoding='utf-8') as f:
         suite = json.load(f)
         
