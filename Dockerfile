@@ -15,4 +15,4 @@ USER appuser
 COPY --chown=appuser:appuser src/ ./src/
 COPY --chown=appuser:appuser prompts/ ./prompts/
 
-CMD ["python", "src/inference.py"]
+ENTRYPOINT ["python", "src/inference.py"]

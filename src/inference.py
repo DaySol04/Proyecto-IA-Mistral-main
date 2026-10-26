@@ -6,7 +6,7 @@ import os
 import pandas as pd
 
 # URL de la API local de Ollama
-#OLLAMA_API = "http://localhost:11434/api/generate"
+#OLLAMA_API = "http://127.0.0.1:11434/api/generate" 
 OLLAMA_API = "http://host.docker.internal:11434/api/generate" #Para que ollama se comunique con docker
 
 def medir_inferencia(modelo, prompt, temperatura, max_tokens):
@@ -24,7 +24,7 @@ def medir_inferencia(modelo, prompt, temperatura, max_tokens):
     respuesta_completa = ""
     
     try:
-        with requests.post(OLLAMA_API, json=payload, stream=True) as response:
+         with requests.post(OLLAMA_API, json=payload, stream=True, proxies={"http": None, "https": None}) as response:
             response.raise_for_status()
             for line in response.iter_lines():
                 if line:

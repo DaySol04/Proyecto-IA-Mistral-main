@@ -1,0 +1,84 @@
+modelo,temperatura,prompt,respuesta,ttft,tokens_por_segundo,tiempo_total,id,categoria
+mistral,0.7,"Actúa como un estudiante universitario. Redacta un correo electrónico dirigido a la coordinación académica para justificar una ausencia por motivos de salud, solicitando además el material de la clase.","Sujeto: Solicitud de ausencia por motivos de salud y pedido de materiales de clase
+
+Estimado/a coordinador/a académico/a de mi carrera,
+
+Le escribo con el fin de comunicarle mi ausencia temporal de las clases debido a que me encuentro enfermo. Estoy buscando atención médica y espero poder regresar pronto a mis clases.
+
+Por favor, me gustaría solicitar el material de la clase que se haya dictado mientras estoy ausente. Agradezco cualquier ayuda que puedan proporcionarme para seguir avanzando en mi curso.
+
+Me alegro de poder contar con su apoyo y espero que se encuentre en buen estado de salud.
+
+Gracias por su comprensión.
+
+Sinceramente,
+[Nombre del estudiante]
+[Matrícula]
+[Número de teléfono y/o correo electrónico]",1.708,14.83,18.232,1,Generación de texto
+mistral,0.7,Escribe un texto persuasivo de un párrafo (máximo 120 palabras) convenciendo a los jóvenes de usar menos el celular antes de dormir.,"¡Hola jóvenes! ¿Quieres dormir mejor y despertar fresco y energético? El uso de tu celular antes de dormir puede ser tóxico para tu salud. La luz de la pantalla interfere con tu producción de melatonina, un hormona que regula el ciclo de sueño y despertar. Además, la interacción con el móvil puede causar estrés mental que te impide relajarte y caer en el sueño. Por favor, apaga tu móvil antes de dormir y disfruta de una noche de sueño tranquila y profunda. ¡Tu cuerpo y tu mente te lo agradecerán!",0.183,15.32,11.215,2,Generación de texto
+mistral,0.7,"Resume el siguiente texto en exactamente 3 viñetas con un máximo de 20 palabras por viñeta: 'Lo esencial es invisible a los ojos. Fue el zorro quien le enseñó al principito esta gran lección. El zorro le explicó que los hombres han olvidado esta verdad, pero que él no debía olvidarla. Le dijo que uno solo ve bien con el corazón, porque lo verdaderamente importante no se puede ver con los ojos. Al principio, el principito no comprendía del todo, pero al pensar en su rosa, entendió que el tiempo que había perdido con ella era lo que la hacía tan importante.'","1. Zorro enseña a Principito:
+
+   - La verdad es invisible al ojo
+   - Hombre olvida esta lección
+   - No olvides ver con tu corazón
+
+2. Principito sigue sin entender:
+
+   - La lección no se comprenderá
+   - Apenas comprende, recuerda su rosa
+   - Entiende el valor del tiempo perdido
+
+3. Principito comprende la lección:
+
+   - La rosa lo hace comprender la lección
+   - El tiempo perdido la hace importante
+   - La vida es más allá de la apariencia visible",0.124,15.11,10.379,3,Resumen
+mistral,0.7,"Lee el siguiente fragmento y resúmelo en 2 oraciones claras: 'La tecnología ha revolucionado la educación en la última década. El acceso a internet y dispositivos móviles ha permitido que los estudiantes aprendan a su propio ritmo y desde cualquier lugar. Sin embargo, la brecha digital sigue siendo un desafío, ya que no todos los estudiantes cuentan con los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades existentes en el sistema educativo.'","La tecnología ha transformado significativamente la educación en los últimos diez años, permitiendo que los estudiantes aprendan a su propio paso y desde cualquier lugar gracias al acceso a internet y dispositivos móviles. Sin embargo, la brecha digital sigue siendo un desafío, ya que no todos los estudiantes tienen acceso a los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades existentes en el sistema educativo.",0.108,15.27,8.096,4,Resumen
+mistral,0.7,Corrige los errores de ortografía y gramática en el siguiente texto: 'El dia de ayer los chicos fueron a caminar por el parque pero se encontraron con que abian muchas personas y no pudieron encontrar un lugar donde sentarse.',"El día anterior, los chicos fueron a caminar por el parque, pero se encontraron con que había muchas personas y no pudieron encontrar un lugar donde sentarse.
+
+Correcciones realizadas:
+- Día (en lugar de dia)
+- Ayer (en lugar de dia)
+- Había (en lugar de abian)
+- Lugar (en lugar de lugar)
+- Sentarse (en lugar de sentar)",0.172,15.2,6.815,5,Corrección y traducción
+mistral,0.7,Traduce el siguiente refrán al inglés de la manera más natural posible: 'No hay mal que por bien no venga'.,"""No good comes from evil"" or ""Every cloud has a silver lining"" could be possible translations for the Spanish proverb ""No hay mal que por bien no venga"", which means that something bad can ultimately lead to something good.",0.13,15.44,3.498,6,Corrección y traducción
+mistral,0.7,Escribe una función en Python llamada 'factorial' que reciba un número entero y calcule su factorial de forma iterativa. Incluye comentarios en el código.,"Aquí hay un ejemplo de cómo podrías escribir una función llamada `factorial` en Python que calcule el factorial de un número entero de forma iterativa. Los comentarios se encuentran al lado de cada línea de código para explicar lo que hace cada parte.
+
+```python
+def factorial(n):
+    # Inicializamos el factorial a 1
+    resultado = 1
+
+    # Bucle for para calcular el factorial de un número entero
+    for i in range(2, n + 1):
+        # Multiplicamos el resultado por el número actual del bucle
+        resultado *= i
+
+    # Retornamos el resultado del cálculo del factorial
+    return resultado
+```
+
+Esta función toma un número entero `n` como parámetro y realiza un cálculo iterativo para calcular su factorial. El bucle for itera desde 2 hasta `n + 1` (no incluyendo `n + 1`), en cada iteración se multiplica el resultado ac",0.162,15.44,16.811,7,Código
+mistral,0.7,"Genera una consulta SQL que seleccione el nombre y el correo electrónico de todos los clientes que hayan realizado compras por más de $500 en el último mes, ordenados alfabéticamente.","Para generar la consulta SQL que seleccione el nombre y el correo electrónico de todos los clientes que hayan realizado compras por más de $500 en el último mes, ordenados alfabéticamente, podrías utilizar el siguiente código:
+
+```sql
+SELECT clientes.nombre, clientes.correo
+FROM compras
+INNER JOIN clientes ON compras.id_cliente = clientes.id
+WHERE compras.fecha >= DATE(NOW()) - INTERVAL 1 MONTH
+AND compras.total > 500
+ORDER BY clientes.nombre ASC;
+```
+
+Esta consulta hace un _join_ entre las tablas `compras` y `clientes` en base a su llave primaria `id`. Después filtra las compras que hayan sido realizadas en el último mes (`WHERE compras.fecha >= DATE(NOW()) - INTERVAL 1 MONTH`) y con un total mayor a $500 (`compras.total > 5",0.191,15.16,17.147,8,Código
+mistral,0.7,"Tengo 5 manzanas. Si me como 2 y luego un amigo me regala 4, ¿cuántas manzanas tengo ahora? Explica el razonamiento matemático paso a paso.","Primero, tienes 5 manzanas. Después de comer 2, tienes 5 menos 2, que es igual a 3 manzanas. Luego, tu amigo te regala 4 manzanas. Por lo tanto, ahora tienes las 3 manzanas que tenías más las 4 manzanas que recibiste, lo que resulta en un total de 7 manzanas.
+
+El razonamiento matemático paso a paso es:
+
+1. Inicialmente tienes 5 manzanas.
+2. Después de comer 2 manzanas, tienes 5 menos 2, que es 3 manzanas.
+3. Luego, tienes 3 manzanas más las 4 manzanas que recibiste de tu amigo, que es igual a 7 manzanas.
+
+Así que ahora tienes 7 manzanas.",0.113,15.06,14.659,9,Razonamiento y veracidad
+mistral,0.7,¿Cuál es el río más largo del mundo? Responde con el nombre del río y el continente donde se encuentra.,El río más largo del mundo es el Nilo. Se encuentra en África.,0.105,15.56,1.391,10,Razonamiento y veracidad

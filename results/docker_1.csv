@@ -1,0 +1,69 @@
+modelo,temperatura,prompt,respuesta,ttft,tokens_por_segundo,tiempo_total,id,categoria
+mistral,0.7,"Actúa como un estudiante universitario. Redacta un correo electrónico dirigido a la coordinación académica para justificar una ausencia por motivos de salud, solicitando además el material de la clase.","Sujeto: Solicitud de Ausencia por Motivos de Salud y Solicitud de Materiales de Clase
+
+Estimado/a Coordinador/a Académico/a,
+
+Espero que esté usted en buena salud. Quiero comunicarle que debido a una enfermedad que me afecta de manera grave, no estaré en capacidad de asistir a las clases durante el próximo par de semanas.
+
+Siento mucho no poder asistir y comprometerme con mis estudios, pero mi salud es prioridad en estos momentos. En este contexto, necesito su apoyo para solicitar el material de las clases que faltaré durante mi ausencia.
+
+Por favor, si usted pudiese compartirme los materiales y presentaciones que se realicen durante mi ausencia, se los agradecería mucho y lo utilizaría para mantenerme al tanto de lo que se esta desarrollando en las clases.
+
+Además, me gustaría pedirle permiso para poder realizar el",10.668,15.97,26.76,1,Generación de texto
+mistral,0.7,Escribe un texto persuasivo de un párrafo (máximo 120 palabras) convenciendo a los jóvenes de usar menos el celular antes de dormir.,"¡Amigos jóvenes! Imaginate un sueño más profundo, más descansador y más refrescante. Para conseguirlo, hay una buena práctica a seguir: apagar tus teléfonos móviles antes de dormir. La luz emita por la pantalla de tu teléfono impide que tu cuerpo produzca melatonina, un hormona que regula el ciclo de sueño y despertar. Así, el uso de teléfonos justo antes de dormir puede afectar tu calidad de sueño, aumentar la fatiga y afectar tu salud en general. No te pierdas este beneficio para tu vida diaria. Asegúrate de apagar tu teléfono y disfruta de un sueño tranquilo y profundo. ¡Tú y tus sueños te esperan!",0.178,15.79,13.415,2,Generación de texto
+mistral,0.7,"Resume el siguiente texto en exactamente 3 viñetas con un máximo de 20 palabras por viñeta: 'Lo esencial es invisible a los ojos. Fue el zorro quien le enseñó al principito esta gran lección. El zorro le explicó que los hombres han olvidado esta verdad, pero que él no debía olvidarla. Le dijo que uno solo ve bien con el corazón, porque lo verdaderamente importante no se puede ver con los ojos. Al principio, el principito no comprendía del todo, pero al pensar en su rosa, entendió que el tiempo que había perdido con ella era lo que la hacía tan importante.'","1. Zorro enseña Principito: Lo esencial es invisible.
+
+2. Zorro explica: Ver con corazón, no solo con ojos.
+
+3. Principito entiende: Rosa importancia proveniente del tiempo perdido.",0.277,15.97,4.221,3,Resumen
+mistral,0.7,"Lee el siguiente fragmento y resúmelo en 2 oraciones claras: 'La tecnología ha revolucionado la educación en la última década. El acceso a internet y dispositivos móviles ha permitido que los estudiantes aprendan a su propio ritmo y desde cualquier lugar. Sin embargo, la brecha digital sigue siendo un desafío, ya que no todos los estudiantes cuentan con los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades existentes en el sistema educativo.'","La tecnología ha transformado la educación en los últimos diez años, permitiendo a los estudiantes aprender a su propio ritmo y desde cualquier lugar gracias al acceso a internet y dispositivos móviles. Sin embargo, la brecha digital sigue siendo un problema, ya que no todos los estudiantes tienen acceso a los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades existentes en el sistema educativo.",0.257,15.85,7.636,4,Resumen
+mistral,0.7,Corrige los errores de ortografía y gramática en el siguiente texto: 'El dia de ayer los chicos fueron a caminar por el parque pero se encontraron con que abian muchas personas y no pudieron encontrar un lugar donde sentarse.',"El día anterior, los chicos fueron a caminar por el parque, pero se encontraron con que había muchas personas y no pudieron encontrar un lugar donde sentarse.
+
+En este texto, se han corregido los errores de ortografía y gramática siguientes:
+
+- ""dia de ayer"" (debe ser ""el día anterior"")
+- ""chicos"" (debe ser singular en el caso de ""los chicos"" en el caso del verbo ""pudieron"")
+- ""caminar"" (debe ser ""caminar"" en lugar de ""caminar por"")
+- ""abian"" (debe ser ""habían"")
+- ""pudieron"" (debe ser ""pudieron encontrar"")
+- ""sentarse"" (debe ser ""un lugar donde sentarse"")",0.175,15.92,11.982,5,Corrección y traducción
+mistral,0.7,Traduce el siguiente refrán al inglés de la manera más natural posible: 'No hay mal que por bien no venga'.,"The proverb, ""No hay mal que por bien no venga,"" translates to English as, ""No evil comes without some good."" This means that even in bad situations, some good can come out of them or something positive can result.",0.163,16.29,3.355,6,Corrección y traducción
+mistral,0.7,Escribe una función en Python llamada 'factorial' que reciba un número entero y calcule su factorial de forma iterativa. Incluye comentarios en el código.,"```python
+
+def factorial(numero):
+    # Inicializamos la variable resultado con 1, ya que el factorial de 0 es 1
+    resultado = 1
+
+    # Bucle while que sigue hasta que numero es menor que 0 (lo cual no es posible, por lo que el bucle nunca se detendrá)
+    while numero > 0:
+        # Multiplicamos resultado por el actual valor de numero
+        resultado *= numero
+
+        # Le restamos 1 al valor de numero
+        numero -= 1
+
+    # Finalmente, devolvemos el resultado (el factorial calculado)
+    return resultado
+```
+
+Esta función calcula el factorial de un número entero iterativamente, multiplicando todos los números desde 1 hasta el número dado.",0.161,15.95,12.515,7,Código
+mistral,0.7,"Genera una consulta SQL que seleccione el nombre y el correo electrónico de todos los clientes que hayan realizado compras por más de $500 en el último mes, ordenados alfabéticamente.","Aquí tienes una consulta SQL que cumple con tus requisitos. Suponiendo que tienes tres tablas: `clientes`, `compras` y `productos`, y que en la tabla `compras` hay un campo llamado `precio_total` que indica el total de la compra y otro campo `fecha_compra` que indica la fecha de la compra:
+
+```sql
+SELECT clientes.nombre, clientes.correo_electronico
+FROM clientes
+JOIN compras ON clientes.id_cliente = compras.id_cliente
+JOIN productos ON compras.id_producto = productos.id_producto
+WHERE YEAR(fecha_compra) = YEAR(CURRENT_DATE()) AND MONTH(fecha_compra) = MONTH(CURRENT_DATE()) AND precio_total > 500
+ORDER BY clientes.nombre ASC;
+```
+
+Esta consulta busca el nombre y el correo electrónico de los clientes que hayan realizado compras",0.171,15.81,16.43,8,Código
+mistral,0.7,"Tengo 5 manzanas. Si me como 2 y luego un amigo me regala 4, ¿cuántas manzanas tengo ahora? Explica el razonamiento matemático paso a paso.","El razonamiento matemático paso a paso es el siguiente:
+
+1. Inicialmente tienes 5 manzanas.
+2. Le das a comer 2 manzanas, lo que te deja con 5 - 2 = 3 manzanas.
+3. Luego, un amigo tú le regala 4 manzanas, lo que te suma 4 a las 3 manzanas que tienes restantes, lo que resulta en 3 + 4 = 7 manzanas.
+
+Por lo tanto, tienes 7 manzanas ahora.",0.177,15.44,9.441,9,Razonamiento y veracidad
+mistral,0.7,¿Cuál es el río más largo del mundo? Responde con el nombre del río y el continente donde se encuentra.,"El río más largo del mundo es el Nilo, y se encuentra en África.",0.164,16.44,1.441,10,Razonamiento y veracidad

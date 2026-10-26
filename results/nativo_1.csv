@@ -1,0 +1,75 @@
+modelo,temperatura,prompt,respuesta,ttft,tokens_por_segundo,tiempo_total,id,categoria
+mistral,0.7,"Actúa como un estudiante universitario. Redacta un correo electrónico dirigido a la coordinación académica para justificar una ausencia por motivos de salud, solicitando además el material de la clase.","Sujeto: Solicitud de ausencia por motivos de salud y requerimiento de materiales de clase
+
+Estimados miembros de la coordinación académica,
+
+Espero que este correo me alcanze en buenos momentos. Quiero informarles que debido a un problema de salud personal, no puedo asistir a clases durante el próximo tiempo. Estoy tratando de organizarme para cumplir con todos mis compromisos académicos, pero necesito una breve ausencia para recibir atención médica y permitirme recuperarme lo antes posible.
+
+Para mantener mis estudios en curso, te pediría que me provean los materiales de clase que se hayan presentado durante mi ausencia, por favor. Puedo acceder a mis correo electrónico en cualquier momento, por lo que si lo consideran necesario, puedo proporcionarme los materiales a través de ella.
+
+Además, pediría su apoyo para planificar una sesión de repaso individual para que",10.66,15.03,27.759,1,Generación de texto
+mistral,0.7,Escribe un texto persuasivo de un párrafo (máximo 120 palabras) convenciendo a los jóvenes de usar menos el celular antes de dormir.,"¡Hola jóvenes! En un mundo donde la tecnología nos rodea, es importante recordar que el descanso es clave para nuestra salud mental y física. Una buena práctica que debemos adoptar es dejar de usar nuestros teléfonos móviles antes de dormir.
+
+El luz del teléfono puede interferir con el ciclo de sueño, causando problemas para dormir y despertar. Además, la exposición a la luz del teléfono puede aumentar el riesgo de depresión y otras enfermedades mentales.
+
+Por favor, tenemos que recordar que nuestra salud es más importante que cualquier mensaje o notificación. Asegúrate de apagar tu teléfono antes de dormir para que puedas descansar mejor y comenzar el día en forma de manera más energética.
+
+Cree en ti mismo y en tu bienestar. ¡Tienes el poder de tomar decisiones que te ayuden a ser mejor y vivir una vida más saludable",0.179,14.79,17.553,2,Generación de texto
+mistral,0.7,"Resume el siguiente texto en exactamente 3 viñetas con un máximo de 20 palabras por viñeta: 'Lo esencial es invisible a los ojos. Fue el zorro quien le enseñó al principito esta gran lección. El zorro le explicó que los hombres han olvidado esta verdad, pero que él no debía olvidarla. Le dijo que uno solo ve bien con el corazón, porque lo verdaderamente importante no se puede ver con los ojos. Al principio, el principito no comprendía del todo, pero al pensar en su rosa, entendió que el tiempo que había perdido con ella era lo que la hacía tan importante.'","1. Zorro enseña a Principito: El esencial es invisible.
+
+2. Zorro explica: Lo verdaderamente importante no se ve con los ojos.
+
+3. Principito comprende: La rosa importante es lo que perdió en tiempo.",0.302,14.98,4.706,3,Resumen
+mistral,0.7,"Lee el siguiente fragmento y resúmelo en 2 oraciones claras: 'La tecnología ha revolucionado la educación en la última década. El acceso a internet y dispositivos móviles ha permitido que los estudiantes aprendan a su propio ritmo y desde cualquier lugar. Sin embargo, la brecha digital sigue siendo un desafío, ya que no todos los estudiantes cuentan con los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades existentes en el sistema educativo.'","La tecnología ha transformado la educación en los últimos diez años, permitiendo a los estudiantes aprender a su propio ritmo y desde cualquier lugar gracias al acceso a internet y dispositivos móviles. Sin embargo, persiste la brecha digital como un desafío, ya que no todos los estudiantes tienen los recursos necesarios para aprovechar estas herramientas, lo que puede aumentar las desigualdades en el sistema educativo.",0.284,15.05,7.795,4,Resumen
+mistral,0.7,Corrige los errores de ortografía y gramática en el siguiente texto: 'El dia de ayer los chicos fueron a caminar por el parque pero se encontraron con que abian muchas personas y no pudieron encontrar un lugar donde sentarse.',"El día anterior, los chicos fueron a caminar por el parque, pero se encontraron con que había muchas personas y no pudieron encontrar un lugar donde sentarse.
+
+En el texto original hay varios errores de ortografía y gramática:
+
+* ""dia"" debe ser ""día"" (con acento agudo)
+* ""chicos"" debe ser ""chicos"" (sin acento)
+* ""caminar"" debe ser ""caminar"" (sin acento)
+* ""parque"" debe ser ""parque"" (sin acento)
+* ""abian"" debe ser ""habían"" (con acento agudo y dos ""a"")
+* ""pudieron"" debe ser ""pudieron"" (sin acento)
+* ""sentarse"" debe ser ""sentarse"" (sin acento)
+
+En el texto corregido, he eliminado los errores de ortografía y gramática para que el texto sea más legible y coherente.",0.18,15.17,15.865,5,Corrección y traducción
+mistral,0.7,Traduce el siguiente refrán al inglés de la manera más natural posible: 'No hay mal que por bien no venga'.,"The closest translation to the Spanish proverb ""No hay mal que por bien no venga"" in English would be: ""No good ever comes from evil."" This translation captures the essence of the original phrase, which suggests that even something bad may have a silver lining or lead to something good eventually. However, it's important to note that the original proverb carries a more subtle and nuanced meaning that might be harder to directly translate, as it implies that even bad situations can bring about some form of improvement or benefit.",0.182,15.15,7.443,6,Corrección y traducción
+mistral,0.7,Escribe una función en Python llamada 'factorial' que reciba un número entero y calcule su factorial de forma iterativa. Incluye comentarios en el código.,"Para crear una función en Python que calcule el factorial de un número entero iterativamente, puedes usar el siguiente código:
+
+```python
+def factorial(n):
+    # Inicializamos la variable factorial con 1, ya que el factorial de 0 es 1
+    factorial = 1
+
+    # Realizamos una bucle 'for' desde 2 hasta el número dado 'n'
+    for i in range(2, n + 1):
+        # Multiplicamos la variable factorial por el valor actual de 'i' en cada iteración
+        factorial *= i
+
+    # Devolvemos la variable factorial que contiene el resultado del factorial calculado
+    return factorial
+```
+
+Esta función `factorial` recibe un número entero como argumento y calcula su factorial iterativamente utilizando un bucle 'for'. La variable `factorial` se inicializa con 1, ya que el factorial de 0 es 1, y en cada iteración del bucle se multiplica la variable por el valor actual de `",0.164,14.96,17.342,7,Código
+mistral,0.7,"Genera una consulta SQL que seleccione el nombre y el correo electrónico de todos los clientes que hayan realizado compras por más de $500 en el último mes, ordenados alfabéticamente.","Aquí tienes un ejemplo de consulta SQL que cumpla con las especificaciones proporcionadas:
+
+```sql
+SELECT Nombre, Email
+FROM Clientes
+JOIN Ventas ON Clientes.ID = Ventas.ClienteID
+WHERE Ventas.FechaVenta >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
+AND Ventas.MontoTotal > 500
+ORDER BY Nombre ASC;
+```
+
+En este ejemplo, asumo que en la base de datos existen tablas llamadas `Clientes` y `Ventas`. La consulta se conecta ambas tablas por medio del campo `ClienteID`. Se filtra por compras realizadas en el último mes (se utiliza `DATE_SUB(CURDATE(), INTERVAL 1 MONTH)` para obtener la fecha del primer día del mes pasado) y se ordena por nombre del cliente en orden alfabético (`ORDER BY Nombre ASC`).",0.17,15.17,15.794,8,Código
+mistral,0.7,"Tengo 5 manzanas. Si me como 2 y luego un amigo me regala 4, ¿cuántas manzanas tengo ahora? Explica el razonamiento matemático paso a paso.","El razonamiento matemático para resolver esta pregunta es sencillo. Primero, tienes 5 manzanas. Luego, comés 2 manzanas y quedaas con 3 manzanas. Después, tu amigo te regala 4 manzanas más. Ahora, sumamos las manzanas que tenías antes de que tu amigo te regalara más (3 manzanas) y las que recibiste de él (4 manzanas), y la suma total es la cantidad de manzanas que tienes ahora. Matemáticamente se puede representar de la siguiente manera:
+
+- Inicialmente tienes 5 manzanas.
+- Comes 2 manzanas y quedaas con 3 manzanas.
+- Tu amigo te regala 4 manzanas más.
+- La cantidad de manzanas que tienes ahora es la suma de las manzanas que tenías inicialmente (5) y las que recibiste de tu amigo (4).
+
+Así que si sumamos 5 y 4, obt",0.189,15.3,16.981,9,Razonamiento y veracidad
+mistral,0.7,¿Cuál es el río más largo del mundo? Responde con el nombre del río y el continente donde se encuentra.,"El río más largo del mundo es el Nilo, y se encuentra en África.",0.156,15.79,1.485,10,Razonamiento y veracidad
