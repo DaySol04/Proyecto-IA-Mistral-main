@@ -1,7 +1,15 @@
-__pycache__
+# Archivos del modelo (por si acaso)
+*.gguf
+*.bin
+
+# Entornos virtuales y caché de Python
+venv/
+__pycache__/
 *.pyc
-.git
-.env
-results/
-docs/
-README.md
+
+# Archivos de resultados temporales
+results/*.csv
+
+# Archivos de sistema (Windows/Mac)
+.DS_Store
+Thumbs.db
